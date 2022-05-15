@@ -24,6 +24,7 @@ React 17.0.1
 **Build and Run Frontend application**
       _GOTO >_ **~/absolute-path-to-directory/CreditCardSystem/CCAPP_FRONTEND
       and enter below command in terminal
+      
       > **```npm install```** it will install the node modules, once it completed successfully then run following command to start the application.
       
       > **```npm start```**  it will start the frontend application on port 3000.

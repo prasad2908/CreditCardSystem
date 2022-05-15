@@ -5,7 +5,7 @@ const CC_API_BASE_URL = "http://localhost:8082/creditcard";
 
 export const addNewCard = (creditcard, history) => async dispatch => {
     try {
-        await axios.post(CC_API_BASE_URL + "/addNewCard", creditcard);
+        const test = await axios.post(CC_API_BASE_URL + "/addNewCard", creditcard);
         history.push("/");
         dispatch({
             type: GET_ERRORS,

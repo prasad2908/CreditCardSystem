@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 const InputForm = ({title, creditcard, errors, onSubmitForm, handleInputChange}) => {
 
     const {name, number, balance, limit} = creditcard;
+    errors.numberError = errors.message;
     const {nameError, numberError, balanceError, limitError} = errors;
 
     return (
@@ -44,14 +45,10 @@ const InputForm = ({title, creditcard, errors, onSubmitForm, handleInputChange})
                                 <div className="invalid-feedback">{limitError}</div>
                             </div>
                             <div className="form-group">
-                                <label>Balance</label>
+                        
                                 <input
-                                    type="decimal"
-                                    name="balance"
-                                    className={balanceError ? "form-control is-invalid" : "form-control"}
-                                    value={balance}
-                                    onChange={handleInputChange}/>
-                                <div className="invalid-feedback">{balanceError}</div>
+                                    type="hidden"
+                                    name="balance" />
                             </div>
                             <input type="submit" className="btn btn-success" value="Save"/>
                             <Link to={"/"}>
